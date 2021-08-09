@@ -77,10 +77,10 @@ namespace project
 
             while (dtReader.Read())
             {
-                Int64 id = (int)dtReader["id"];
+                Int64 id = (Int64)dtReader["id"];
                 string title = (string)dtReader["title"];
                 string desc = (string)dtReader["desc"];
-                DateTime date = (DateTime)dtReader["date"];
+                DateTime date = DateTime.Now;
 
                 int cnv = Convert.ToInt32(id);
 
