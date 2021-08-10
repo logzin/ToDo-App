@@ -2,12 +2,10 @@ using System;
 using Microsoft.Data.Sqlite;
 using System.Collections.Generic;
 
-
 namespace project
 {
     public class Connection 
     {
-        
         SqliteConnectionStringBuilder connectionString = new SqliteConnectionStringBuilder();
         SqliteConnection conn = new SqliteConnection();                 
 
@@ -18,8 +16,7 @@ namespace project
         }
 
         public SqliteConnection connect()
-        {
-            
+        {   
             SqliteConnection conn = new SqliteConnection(connectionString.DataSource);
 
             conn.Open();     
@@ -33,7 +30,5 @@ namespace project
                 conn.Close();  
             }         
         }
-   
-        
     }
 }

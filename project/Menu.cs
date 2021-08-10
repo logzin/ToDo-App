@@ -37,7 +37,6 @@ namespace project
 
         public int runHead()
         {
-            
             ConsoleKey keyPressed;
             do
             {
@@ -66,7 +65,6 @@ namespace project
                         selectedMenuIndex = 0;
                     }                    
                 }
-
             } while (keyPressed != ConsoleKey.Enter);
 
             switch (selectedMenuIndex)
@@ -81,7 +79,6 @@ namespace project
                     exit();
                     break;
             }
-
             return selectedMenuIndex;
         }
 
@@ -99,7 +96,6 @@ namespace project
                 ConsoleKeyInfo keyinfo = Console.ReadKey();
                 keyPressed = keyinfo.Key;
         
-
                 if (keyPressed == ConsoleKey.UpArrow)
                 {
                     selectedIndex--;
@@ -161,7 +157,6 @@ namespace project
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.BackgroundColor = ConsoleColor.Black;
                 }
-
                 Console.WriteLine($"{prefix} ||{task.title}||{task.desc}|| {deleteFb}");
             }
             Console.ResetColor();
@@ -225,8 +220,7 @@ This is the V2.0 version of ToDoList. What would you like to do?
   | |/ _` / __| |/ / __|    
   | | (_| \__ \   <\__ \  _ 
   \_/\__,_|___/_|\_\___/ (_)
-                            
-                            
+                                               
 ";
             switch (i)
             {
