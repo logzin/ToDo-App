@@ -7,16 +7,19 @@ namespace project
 {
     public class Connection 
     {
-        SqliteConnection conn = new SqliteConnection();
+        
         SqliteConnectionStringBuilder connectionString = new SqliteConnectionStringBuilder();
+        SqliteConnection conn = new SqliteConnection();                 
 
         public Connection()
         {      
-            connectionString.DataSource = "Data Source=C:\\Users\\logzi\\Documents\\GitHub\\ToDo\\database\\TasksApp.db";
+            connectionString.DataSource = "DataSource=TasksApp.db";          
+            SqliteConnection conn = new SqliteConnection(connectionString.DataSource);
         }
 
         public SqliteConnection connect()
         {
+            
             SqliteConnection conn = new SqliteConnection(connectionString.DataSource);
 
             conn.Open();     
